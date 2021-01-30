@@ -13,7 +13,7 @@ import java.util.Random;
 import java.util.Scanner;
 
 
-public class FormPO {
+public class FormPO extends BasePO{
 
     @FindBy(id = "inputFirstName3" )
     private WebElement inputFirstName3;
@@ -140,12 +140,15 @@ public class FormPO {
         return webElements.get(randomNumber);
     }
 
+    public FormPO(WebDriver driver) {
+        super(driver);
+        ownUrl="https://seleniumui.moderntester.pl/form.php";
 
-
-
-
-    public FormPO(WebDriver driver){
-        PageFactory.initElements(driver,this);
-        driver.get("https://seleniumui.moderntester.pl/form.php");
     }
+
+
+//public FormPO(WebDriver driver){
+   //     PageFactory.initElements(driver,this);
+    //    driver.get("https://seleniumui.moderntester.pl/form.php");
+    //}
 }
