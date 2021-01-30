@@ -1,3 +1,5 @@
+package Day4;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.testng.annotations.Test;
@@ -14,6 +16,9 @@ public class DatePickerTest extends BaseTest {
         selectDate(3, 5, 2015);
 
     }
+
+
+    
 
     private void selectDate(int day, int month, int year) {
         getDriver().get("https://seleniumui.moderntester.pl/datepicker.php");
