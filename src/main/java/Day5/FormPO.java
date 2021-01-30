@@ -14,8 +14,8 @@ public class FormPO {
     @FindBy(id = "inputLastName3")
     private  WebElement inputLastName3;
 
-    public void  fillName(String name, String lastName){
-        inputFirstName3.sendKeys(name);
+    public void  fillName(String firstName, String lastName){
+        inputFirstName3.sendKeys(firstName);
         inputLastName3.sendKeys(lastName);
     }
 
