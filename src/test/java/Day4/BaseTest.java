@@ -1,10 +1,14 @@
 package Day4;
 
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
+
+import java.util.List;
+import java.util.Random;
 
 public class BaseTest {
     public WebDriver getDriver() {
@@ -34,4 +38,15 @@ public class BaseTest {
         driver.quit();
         //driver.close();
    }
+
+    public int getRandomNumber(int max) {
+        Random rnd = new Random();
+        return rnd.nextInt(max) + 1;
+    }
+
+    public WebElement getRandomElement(List<WebElement> webElements) {
+        Random rnd = new Random();
+        int randomNumber = rnd.nextInt(webElements.size());
+        return webElements.get(randomNumber);
+    }
 }
